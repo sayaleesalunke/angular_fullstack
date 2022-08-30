@@ -1,0 +1,16 @@
+
+<table class="table table-striped">
+    <tr>
+        <th scope="col">stockName</th>
+        <th scope="col">call</th>
+        <th scope="col">value</th>
+        <th scope="col">highestValue</th>
+      </tr>
+    <tr *ngFor="let item of stringObject">
+      <td>{{item.stockName}}</td>
+      <td>{{item.call}}</td>
+      <td>{{item.value}}</td>
+      <td>{{item.highestValue}}</td>
+    </tr>
+
+</table>

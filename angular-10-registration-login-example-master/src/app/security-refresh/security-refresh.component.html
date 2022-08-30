@@ -1,0 +1,31 @@
+<div class="container">
+      
+    <form [formGroup]="form" (ngSubmit)="submit()">
+           
+        <div class="form-group">
+        <table>
+            <tr>
+                <td>
+                    <select formControlName="secType" class="form-control">
+                        <option disabled>Select secType</option>
+                    
+                        <option *ngFor="let secType of secTypeList">{{secType}}</option>
+                    </select>
+                </td>
+            <td>
+        <input type="text" formControlName="secValue" class="form-control"  />
+        </td>
+        <td>
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                formControlName="secDate"  ngbDatepicker #d="ngbDatepicker">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+              </div>
+        </td>
+        <td> <button class="btn btn-primary" type="submit">Submit</button></td>
+        </tr>
+        </table>  
+        </div>
+       
+    </form>
+</div>
